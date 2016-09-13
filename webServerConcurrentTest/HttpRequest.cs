@@ -17,7 +17,7 @@ namespace webServerConcurrentTest
             try
             {
                 string strURL = url;
-                System.Net.HttpWebRequest request;
+                HttpWebRequest request;
                 request = (System.Net.HttpWebRequest)HttpWebRequest.Create(strURL);
                 request.Proxy = WebRequest.GetSystemWebProxy();
                 request.Method = "POST";
