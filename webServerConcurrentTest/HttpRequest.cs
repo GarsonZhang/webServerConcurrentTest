@@ -17,8 +17,7 @@ namespace webServerConcurrentTest
             try
             {
                 string strURL = url;
-                HttpWebRequest request;
-                request = (System.Net.HttpWebRequest)HttpWebRequest.Create(strURL);
+                HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(strURL);
                 request.Proxy = WebRequest.GetSystemWebProxy();
                 request.Method = "POST";
                 request.ContentType = "application/json;charset=UTF-8";
@@ -133,7 +132,7 @@ namespace webServerConcurrentTest
                         }
 
 
-                        
+
                         //await DisplayTextResult(wcfResponse, OutputField);
                     }
                 }
